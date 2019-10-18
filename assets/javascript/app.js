@@ -5,7 +5,7 @@ let turns =
         question:"how many ballon d'or does messi have?", 
         choices:["1 ballon d'ors", "5 ballon d'ors", "3 ballon d'ors", "4 ballon d'ors"],
         answer: 1,
-        photo: "assets/images/messi-ball.jpg" 
+        photo: "assets/images/messi.webp" 
     },
 
     {
@@ -16,15 +16,33 @@ let turns =
     },
 
     {
+        question:"How many Champions-leagues have Real Madrid won?",
+        choices:["Seven", "Four", "Ten", "Thirteen"],  
+        answer: 3,
+        photo: "assets/images/Madrid.webp" 
+    },
+    {
         question:"The Juventus' player, Cristiano Ronaldo, played in Real Madrid and what other big team?",
         choices:["Porto", "Manchester United", "Milan", "Barcelona"],  
         answer: 1,
-        photo: "assets/images/ronaldo.jpg" 
+        photo: "assets/images/ronaldo.webp" 
+    },
+    {
+        question:"Wow many MLS championship leagues have the Orlando soccer team won?",
+        choices:["none", "Two", "One", "Five"],  
+        answer: 0,
+        photo: "assets/images/orlando.webp" 
+    },   
+    {
+        question:"Which country won the last world cup?",
+        choices:["Italy", "United States", "Brazil", "France"],  
+        answer: 3,
+        photo: "assets/images/france.webp" 
     }
 ];
 let correctAnswers = 0;
 let wrongAnswers = 0;
-let timer = 60;
+let timer = 15;
 let intervalId;
 let userGuess;
 let timing = false;
@@ -95,8 +113,6 @@ function displayQuestion()
 
 $(".answerChoice").on("click", function(){
     userGuess = parseInt($(this).attr("data-guess-value"));
-    // let answer = turn.answer;
-    // let choicesArray = turn
     if (userGuess === turn.answer)
     {
         stop();
@@ -124,7 +140,7 @@ function hidePic (){
       setTimeout(function()
    {
         $("#answersDiv").empty();
-        timer = 60;
+        timer = 15;
 
         if ((wrongAnswers + correctAnswers) === total)
         {
@@ -141,7 +157,7 @@ function hidePic (){
             runTime();
             displayQuestion();
         }
-   }, 3000);
+   }, 5000);
 }
 $("#reset").on("click", function()
 {

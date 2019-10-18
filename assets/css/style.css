@@ -9,9 +9,60 @@ body{
 }
 #questionsDiv{
     text-align: center;
-    background-color: cornsilk;
-    color: brown;
+    background-color:#00BFFF;
+    color: #FFFFF0;
+    
 }
 #answersDiv{
     text-align: center;
+    color: #FF4500;
+    font: 30px bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+}
+#timeLeft{
+    color: #FFFACD;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font: bold;
+    color: #BDB76B;
+}
+img{
+    position: relative;
+    margin-top: 20px;
+}
+.answerChoice:hover{
+    border: 1px solid #c2dbc2;
+}
+@media screen and (max-width:640px){
+    body{
+        background-size: 100%;
+        height: auto;
+    }
+    #questionDiv{
+        font-size: 12px;
+    }
+    #answersDiv{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 12px;
+    }
+    h4{
+        font-size: 12px;
+    }
+    p{
+        font-size: 10px;
+    }
+    img{
+        position: relative;
+        margin-top: -20px;
+    }
 }
