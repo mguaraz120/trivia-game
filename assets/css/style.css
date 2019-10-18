@@ -1,0 +1,17 @@
+body{
+    background-image: url("../images/stadium.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+}
+.page{
+    text-align: center;
+    margin: 10px;
+}
+#questionsDiv{
+    text-align: center;
+    background-color: cornsilk;
+    color: brown;
+}
+#answersDiv{
+    text-align: center;
+}
