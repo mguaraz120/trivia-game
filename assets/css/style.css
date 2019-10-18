@@ -41,10 +41,10 @@ img{
         height: auto;
     }
     #questionDiv{
-        font-size: 12px;
+        font-size: 20px;
     }
     #answersDiv{
-        font-size: 12px;
+        font-size: 20px;
     }
     h1{
         font-size: 20px;
@@ -59,10 +59,11 @@ img{
         font-size: 12px;
     }
     p{
-        font-size: 10px;
+        font-size: 18px;
     }
     img{
         position: relative;
-        margin-top: -20px;
+        width: 300px;
+        height: auto;
     }
 }
