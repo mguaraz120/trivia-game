@@ -2,6 +2,7 @@ body{
     background-image: url("../images/stadium.jpg");
     background-repeat: no-repeat;
     background-size: 100%; 
+    height: auto;
 }
 .page{
     text-align: center;
@@ -65,6 +66,6 @@ img{
         position: relative;
         width: 300px;
         height: auto;
-        margin-top: 70px;
+        margin-top: 100px;
     }
 }
