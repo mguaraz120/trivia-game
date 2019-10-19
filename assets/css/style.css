@@ -6,20 +6,20 @@ body{
 }
 .page{
     text-align: center;
-    margin: 10px;
+    margin: 5px;
 }
 #questionsDiv{
     text-align: center;
     background-color:#00BFFF;
     color: #FFFFF0;
-    
+    font: 25px bolder;   
 }
 #answersDiv{
     text-align: center;
-    color: #FF4500;
-    font: 30px bolder;
+    color: #FF0000;
+    font: 25px bolder;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 10px;
+    margin: 5px;
 }
 #timeLeft{
     color: #FFFACD;
@@ -29,12 +29,28 @@ h1{
     font: bold;
     color: #BDB76B;
 }
+h4{
+    background-color: #AFEEEE;
+    color: #4682B4 ;
+    width: 50%;
+    text-align: center;
+}
+p{
+    background-color: #AFEEEE;
+    color: #4682B4 ;
+}
+
 img{
     position: relative;
-    margin-top: 20px;
+    margin-top: 0px;
+}
+.answerChoice{
+    width: 40%;
+    background-color: #AFEEEE;
+    color: #4682B4 ;
 }
 .answerChoice:hover{
-    border: 1px solid #c2dbc2;
+    border: 1px solid #00BFFF;
 }
 @media screen and (max-width:640px){
     body{
@@ -60,7 +76,7 @@ img{
         font-size: 12px;
     }
     p{
-        font-size: 18px;
+        font-size: 16px;
     }
     img{
         position: relative;

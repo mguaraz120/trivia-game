@@ -48,11 +48,11 @@ let userGuess;
 let timing = false;
 let total = turns.length;
 let turn;
-let index;
-let newArray = [];
-let holder = [];
+let currentTurnIndex;
+let turnsHolder = [];
 
 $("#reset").hide();
+
 $("#start").on("click", function ()
 {
     $("#start").hide();
@@ -60,8 +60,21 @@ $("#start").on("click", function ()
     runTime();
     for (let i=0; i<turns.length; i++)
     {
-        holder.push(turns[i]);
+        turnsHolder.push(turns[i]);
     }
+})
+
+$("#reset").on("click", function()
+{
+    $("#reset").hide();
+    $("#answersDiv").empty();
+    $("#questionsDiv").empty();
+    for(var i = 0; i < turnsHolder.length; i++) 
+    {
+		turns.push(turnsHolder[i]);
+	}
+	runTime();
+	displayQuestion();
 })
 
 function runTime()
@@ -95,8 +108,8 @@ function stop()
 
 function displayQuestion()
 {
-    index = Math.floor(Math.random()*turns.length);
-    turn = turns[index];
+    currentTurnIndex = Math.floor(Math.random()*turns.length);
+    turn = turns[currentTurnIndex];
 
     $("#questionsDiv").html("<h2> " + turn.question + "</h2>");
     for (let i=0; i<turn.choices.length; i++)
@@ -111,65 +124,51 @@ function displayQuestion()
 
 
 
-$(".answerChoice").on("click", function(){
-    userGuess = parseInt($(this).attr("data-guess-value"));
-    if (userGuess === turn.answer)
-    {
-        stop();
-        correctAnswers++;
-        userGuess="";
-        $("#answersDiv").html("<p>Correct!</p>");
-        hidePic();
-    }
-    else
-    {
-        stop();
-        wrongAnswers++;
-        userGuess="";
-        $("#answersDiv").html("<p>Wrong! The correct answer is:" + turn.choices[turn.answer] + "</p>");
-        hidePic();
-    }
-})
-}
-
-function hidePic (){
-    $("#answersDiv").append("<img src= " + turn.photo + ">");
-   newArray.push(turn)
-   turns.splice(index, 1);
-
-      setTimeout(function()
-   {
-        $("#answersDiv").empty();
-        timer = 15;
-
-        if ((wrongAnswers + correctAnswers) === total)
+    $(".answerChoice").on("click", function(){
+        userGuess = parseInt($(this).attr("data-guess-value"));
+        if (userGuess === turn.answer)
         {
-            $("#questionsDiv").empty();
-            $("#questionsDiv").html("<h3>Game Over!</h3>");
-            $("#answersDiv").append("<h4> Correct: " + correctAnswers + "</h4>");
-            $("#answersDiv").append("<h4> Incorrect: " + wrongAnswers + "</h4>");
-            $("#reset").show();
-            correctAnswers = 0;
-            wrongAnswers = 0;
+            stop();
+            correctAnswers++;
+            userGuess="";
+            $("#answersDiv").html("<p>Correct!</p>");
+            hidePic();
         }
         else
         {
-            runTime();
-            displayQuestion();
+            stop();
+            wrongAnswers++;
+            userGuess="";
+            $("#answersDiv").html("<p>Wrong! The correct answer is:" + turn.choices[turn.answer] + "</p>");
+            hidePic();
         }
-   }, 5000);
+    })
 }
-$("#reset").on("click", function()
-{
-    $("#reset").hide();
-    $("#answersDiv").empty();
-    $("#questionsDiv").empty();
-	for(var i = 0; i < holder.length; i++) {
-		turns.push(holder[i]);
-	}
-	runTime();
-	displayQuestion();
-})
 
+    function hidePic()
+    {
+        $("#answersDiv").append("<img src= " + turn.photo + ">");
+        turns.splice(currentTurnIndex, 1);
+        setTimeout(function()
+        {
+            $("#answersDiv").empty();
+            timer = 15;
 
+            if ((wrongAnswers + correctAnswers) === total)
+            {
+                $("#questionsDiv").empty();
+                $("#questionsDiv").html("<h3>Game Over!</h3>");
+                $("#answersDiv").append("<h4> Correct: " + correctAnswers + "</h4>");
+                $("#answersDiv").append("<h4> Incorrect: " + wrongAnswers + "</h4>");
+                $("#reset").show();
+                correctAnswers = 0;
+                wrongAnswers = 0;
+            }
+            else
+            {
+                runTime();
+                displayQuestion();
+            }
+        }, 4000);
+    }
 });
