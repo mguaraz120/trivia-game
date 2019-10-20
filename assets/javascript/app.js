@@ -28,7 +28,7 @@ let turns =
         photo: "assets/images/ronaldo.webp" 
     },
     {
-        question:"Wow many MLS championship leagues have the Orlando soccer team won?",
+        question:"How many MLS championship leagues have the Orlando soccer team won?",
         choices:["none", "Two", "One", "Five"],  
         answer: 0,
         photo: "assets/images/orlando.webp" 
