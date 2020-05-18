@@ -1,87 +1,81 @@
-body{
-    background-image: url("../images/stadium.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%; 
-    
+body {
+  background-image: url("../images/stadium.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.page{
-    text-align: center;
-    margin: 5px;
+.page {
+  text-align: center;
+  margin: 5px;
 }
-#questionsDiv{
-    text-align: center;
-    background-color:#00BFFF;
-    color: #FFFFF0;
-    font: 25px bolder;   
+#questionsDiv {
+  text-align: center;
+  color: #fffff0;
+  font: 25px bolder;
 }
-#answersDiv{
-    text-align: center;
-    color: #FF0000;
-    font: 25px bolder;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 5px;
+#answersDiv {
+  text-align: center;
+  color: #ff0000;
+  font: 25px bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-#timeLeft{
-    color: #FFFACD;
+.answerChoice {
+  margin-left: 30%;
 }
-h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font: bold;
-    color: #BDB76B;
+#timeLeft {
+  color: #fffacd;
 }
-h4{
-    background-color: #AFEEEE;
-    color: #4682B4 ;
-    width: 50%;
-    text-align: center;
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font: bold;
+  color: #bdb76b;
 }
-p{
-    background-color: #AFEEEE;
-    color: #4682B4 ;
+h4 {
+  color: #4682b4;
+  width: 50%;
+  text-align: center;
+}
+p {
+  color: #4682b4;
 }
 
-img{
+img {
+  position: relative;
+}
+.answerChoice {
+  width: 40%;
+  color: #4682b4;
+}
+.answerChoice:hover {
+  border: 1px solid #00bfff;
+}
+@media screen and (max-width: 400px) {
+  #questionDiv {
+    font-size: 10px;
+  }
+  #answersDiv {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 10px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 10px;
+  }
+  img {
     position: relative;
-    margin-top: 0px;
-}
-.answerChoice{
-    width: 40%;
-    background-color: #AFEEEE;
-    color: #4682B4 ;
-}
-.answerChoice:hover{
-    border: 1px solid #00BFFF;
-}
-@media screen and (max-width:640px){
-    body{
-        background-size: 100%;
-        height: auto;
-    }
-    #questionDiv{
-        font-size: 20px;
-    }
-    #answersDiv{
-        font-size: 20px;
-    }
-    h1{
-        font-size: 20px;
-    }
-    h2{
-        font-size: 18px;
-    }
-    h3{
-        font-size: 12px;
-    }
-    h4{
-        font-size: 12px;
-    }
-    p{
-        font-size: 16px;
-    }
-    img{
-        position: relative;
-        width: 300px;
-        height: auto;
-        margin-top: 100px;
-    }
+    width: 140px;
+    height: auto;
+    margin-top: 10px;
+  }
 }
