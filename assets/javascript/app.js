@@ -27,7 +27,7 @@ $(document).ready(function () {
     },
     {
       question:
-        "The Juventus' player, Cristiano Ronaldo, played in Real Madrid and what other big team?",
+        "Cristiano Ronaldo, played in Real Madrid and what other big team?",
       choices: ["Porto", "Manchester United", "Milan", "Barcelona"],
       answer: 1,
       photo: "assets/images/ronaldo.webp",

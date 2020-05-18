@@ -19,9 +19,7 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.answerChoice {
-  margin-left: 30%;
-}
+
 #timeLeft {
   color: #fffacd;
 }
@@ -46,6 +44,8 @@ img {
 .answerChoice {
   width: 40%;
   color: #4682b4;
+  font-size: 20px;
+  margin-left: 30%;
 }
 .answerChoice:hover {
   border: 1px solid #00bfff;
