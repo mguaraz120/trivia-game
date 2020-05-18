@@ -13,4 +13,5 @@ The trivia will be in form of multiple choice or true/false options. The user wi
 - HTML
 - CSS
 - Javascript
-  ![Image description](assets/images/trivia.PNG)
+
+  ![Image description](assets/images/Trivia.PNG)
